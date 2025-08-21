@@ -1,0 +1,202 @@
+body{
+  color: white;
+  background-color: rgb(52, 52, 52);
+  font-family: "Open Sans", sans-serif; 
+   font-optical-sizing: auto;
+
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* #root{
+  display: flex;
+  width: 50%;
+  height: fit-content;
+  justify-content: center;
+  border-radius: 3px;
+} */
+
+.outer-div{
+  background-color: black;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border:5px white solid;
+  border-radius: 5px;
+}
+ 
+.header-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:0;
+  text-align: center;
+  width: 70%;
+  font-size: 0.8 rem;
+}
+
+.header-section  h1{
+  margin:0;
+}
+
+.header-section > p{
+  font-weight: 500;
+  opacity: 70%;
+}
+
+.winning-div{
+  display: flex;
+  padding: 5px;
+  min-height: 60px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  background-color: #10A95B;
+  border-radius: 10%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.winning-div h1{
+  margin: 0;
+  font-size: 1.25rem;
+  
+  background-color: #10A95B;
+  
+}
+.winning-div h2{
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  
+  background-color: #10A95B;
+}
+
+.losing-div{
+  @apply winning-div;
+  background-color:red
+}
+
+.losing-div h1{
+  @apply winning-div>h1;
+  background-color: red;
+}
+.losing-div h2{
+  @apply winning-div>h2;
+  background-color: red;
+}
+
+.hidden{
+  @apply winning-div;
+  background-color: black;
+}
+
+.fare-well{
+  @apply winning-div;
+  background-color:rgb(159, 110, 159)
+}
+.fare-well h1{
+  @apply winning-div>h1;
+  background-color:rgb(159, 110, 159)
+}
+
+
+
+.languages-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 70%;
+  padding: 20px;
+  gap: 10px;
+}
+
+.language-box > p{
+  background-color: inherit;
+  margin: 0;
+}
+
+.language-box{
+  color: black;
+  padding: 3px;
+  border: 0px ;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.spacer{
+  height: 30px;
+}
+
+.letter-chosen{
+    width: 20px;
+    height: 10px;
+    padding: 10px 15px;
+    background-color:rgb(52, 52, 52);
+    border-bottom:2px solid white;
+    font-size: 1.25rem;
+    margin: 1px;
+}
+
+.red-letter{
+  color:red
+}
+
+.keyboard{
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.alphabet{
+  background-color: #FCBA29;
+  padding: 10px 17px;
+  font-size: 1.25rem;
+  border:1px white solid;
+  border-radius: 3px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.new-game-btn{
+  font-size: 1.25rem;
+  padding: 10px 35px;
+  border: 1px solid white;
+  background-color: #11B5E5;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom:20px;
+}
+
+.letter-exists{
+  background-color: #10A95B !important;
+
+}
+
+.letter-wont-exist{
+  background-color: red;
+}
+
+.strike-off{
+  opacity: 50%;
+}
+
+.alphabet:disabled{
+  cursor: not-allowed;
+  opacity: 0.5;
+}
